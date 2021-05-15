@@ -207,9 +207,6 @@ BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 # Side FP key for InputDispatcher to skip
 TARGET_INPUTDISPATCHER_SKIP_EVENT_KEY := 96
 
-# Side FP key for InputDispatcher to skip
-TARGET_INPUTDISPATCHER_SKIP_EVENT_KEY := 96
-
 # Treble
 BOARD_VNDK_VERSION := current
 
