@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_gram.mk
+    $(LOCAL_DIR)/corvus_gram.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_gram-user \
-    aosp_gram-userdebug \
-    aosp_gram-eng
+    corvus_gram-user \
+    corvus_gram-userdebug \
+    corvus_gram-eng
