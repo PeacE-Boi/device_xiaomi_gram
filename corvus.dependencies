@@ -7,6 +7,12 @@
   },
   {
     "remote": "github",
+    "repository": "PeacE-Boi/packages_apps_XiaomiDoze",
+    "target_path": "packages/apps/XiaomiDoze",
+    "branch": "11",
+  },
+  {
+    "remote": "github",
     "repository": "PeacE-Boi/vendor_xiaomi_gram",
     "target_path": "vendor/xiaomi/gram",
     "branch": "corvus-11"
