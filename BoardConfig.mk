@@ -1,13 +1,13 @@
 #
-# Copyright (C) 2020 The LineageOS Project
+# Copyright (C) 2020 CorvusOS
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
 # Inherit proprietary blobs
-include vendor/xiaomi/miatoll/BoardConfigVendor.mk
+include vendor/xiaomi/gram/BoardConfigVendor.mk
 
-DEVICE_PATH := device/xiaomi/miatoll
+DEVICE_PATH := device/xiaomi/gram
 
 BUILD_BROKEN_DUP_RULES := true
 
@@ -49,7 +49,7 @@ TARGET_USE_QTI_BT_STACK := true
 
 # Bootloader
 TARGET_NO_BOOTLOADER := true
-TARGET_BOOTLOADER_BOARD_NAME := miatoll
+TARGET_BOOTLOADER_BOARD_NAME := gram
 
 # Build broken
 BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
@@ -89,7 +89,7 @@ BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 KERNEL_LD := LD=ld.lld
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CONFIG := cust_defconfig
-TARGET_KERNEL_SOURCE := kernel/xiaomi/miatoll
+TARGET_KERNEL_SOURCE := kernel/xiaomi/sm6250
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CLANG_VERSION := r383902b
 TARGET_KERNEL_ADDITIONAL_FLAGS := \
@@ -121,16 +121,15 @@ ODM_MANIFEST_SKUS += \
 ODM_MANIFEST_JOYEUSE_FILES := $(DEVICE_PATH)/configs/manifest_joyeuse.xml
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_miatoll
-TARGET_RECOVERY_DEVICE_MODULES := libinit_miatoll
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_gram
+TARGET_RECOVERY_DEVICE_MODULES := libinit_gram
 
 # Media
 TARGET_USES_ION := true
 TARGET_DISABLED_UBWC := true
 
 # OTA assert
-TARGET_OTA_ASSERT_DEVICE := curtana,excalibur,gram,joyeuse
-
+TARGET_OTA_ASSERT_DEVICE := gram
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 134217728
 BOARD_CACHEIMAGE_PARTITION_SIZE := 402653184

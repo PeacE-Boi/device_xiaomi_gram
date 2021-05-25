@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2020 The LineageOS Project
+# Copyright (C) 2020 CorvusOS
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -8,7 +8,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit proprietary targets
-$(call inherit-product, vendor/xiaomi/miatoll/miatoll-vendor.mk)
+$(call inherit-product, vendor/xiaomi/gram/gram-vendor.mk)
 
 # Enable updating of APEXes
 #$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
@@ -367,19 +367,10 @@ PRODUCT_SOONG_NAMESPACES += \
 # Thermal
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal/thermal-engine-map.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-map.conf \
-    $(LOCAL_PATH)/configs/thermal/thermal-engine-map-curtana.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-map-curtana.conf \
-    $(LOCAL_PATH)/configs/thermal/thermal-engine-normal-curtana.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-normal-curtana.conf \
-    $(LOCAL_PATH)/configs/thermal/thermal-engine-camera-curtana.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-camera-curtana.conf \
-    $(LOCAL_PATH)/configs/thermal/thermal-engine-map-excalibur.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-map-excalibur.conf \
-    $(LOCAL_PATH)/configs/thermal/thermal-engine-normal-excalibur.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-normal-excalibur.conf \
-    $(LOCAL_PATH)/configs/thermal/thermal-engine-camera-excalibur.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-camera-excalibur.conf \
     $(LOCAL_PATH)/configs/thermal/thermal-engine-map-gram.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-map-gram.conf \
     $(LOCAL_PATH)/configs/thermal/thermal-engine-normal-gram.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-normal-gram.conf \
     $(LOCAL_PATH)/configs/thermal/thermal-engine-camera-gram.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-camera-gram.conf \
-    $(LOCAL_PATH)/configs/thermal/thermal-engine-map-joyeuse.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-map-joyeuse.conf \
-    $(LOCAL_PATH)/configs/thermal/thermal-engine-normal-joyeuse.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-normal-joyeuse.conf \
-    $(LOCAL_PATH)/configs/thermal/thermal-engine-camera-joyeuse.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-camera-joyeuse.conf
-
+    
 # Telephony
 PRODUCT_PACKAGES += \
     ims-ext-common \

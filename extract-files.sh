@@ -1,13 +1,13 @@
 #!/bin/bash
 #
-# Copyright (C) 2018-2020 The LineageOS Project
+# Copyright (C) 2018-2020 CorvusOS
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
 set -e
 
-export DEVICE=miatoll
+export DEVICE=gram
 export VENDOR=xiaomi
 
 export DEVICE_BRINGUP_YEAR=2020
@@ -16,9 +16,9 @@ export DEVICE_BRINGUP_YEAR=2020
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
 
-ANDROID_ROOT="${MY_DIR}"/../../..
+CORVUS_ROOT="${MY_DIR}"/../../..
 
-HELPER="${ANDROID_ROOT}/tools/extract-utils/extract_utils.sh"
+HELPER="${CORVUS_ROOT}/tools/extract-utils/extract_utils.sh"
 if [ ! -f "${HELPER}" ]; then
     echo "Unable to find helper script at ${HELPER}"
     exit 1
@@ -52,7 +52,7 @@ if [ -z "${SRC}" ]; then
 fi
 
 # Initialize the helper for common device
-setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${ANDROID_ROOT}" true "${CLEAN_VENDOR}"
+setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${CORVUS_ROOT}" true "${CLEAN_VENDOR}"
 
 extract "${MY_DIR}/proprietary-files.txt" "${SRC}" \
         "${KANG}" --section "${SECTION}"
@@ -60,7 +60,7 @@ extract "${MY_DIR}/proprietary-files.txt" "${SRC}" \
 if [ -s "${MY_DIR}/../${DEVICE}/proprietary-files.txt" ]; then
     # Reinitialize the helper for device
     source "${MY_DIR}/../${DEVICE}/extract-files.sh"
-    setup_vendor "${DEVICE}" "${VENDOR}" "${LINEAGE_ROOT}" false "${CLEAN_VENDOR}"
+    setup_vendor "${DEVICE}" "${VENDOR}" "${CORVUS_ROOT}" false "${CLEAN_VENDOR}"
 
     extract "${MY_DIR}/../${DEVICE}/proprietary-files.txt" "${SRC}" \
             "${KANG}" --section "${SECTION}"

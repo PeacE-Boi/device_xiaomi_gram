@@ -1,12 +1,12 @@
 #
-# Copyright (C) 2020 The LineageOS Project
+# Copyright (C) 2020 CorvusOS
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter curtana excalibur gram joyeuse miatoll,$(TARGET_DEVICE)),)
+ifneq ($(filter gram,$(TARGET_DEVICE)),)
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
 include $(CLEAR_VARS)

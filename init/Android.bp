@@ -15,7 +15,7 @@
 //
 
 cc_library_static {
-    name: "libinit_miatoll",
+    name: "libinit_gram",
     recovery_available: true,
     shared_libs: ["libbase"],
     srcs: ["init.cpp"],

@@ -1,13 +1,13 @@
 #!/bin/bash
 #
-# Copyright (C) 2018-2020 The LineageOS Project
+# Copyright (C) 2018-2020 CorvusOS
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
 set -e
 
-export DEVICE=miatoll
+export DEVICE=gram
 export VENDOR=xiaomi
 
 export DEVICE_BRINGUP_YEAR=2020
@@ -17,9 +17,9 @@ INITIAL_COPYRIGHT_YEAR=2020
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
 
-ANDROID_ROOT="${MY_DIR}/../../.."
+CORVUS_ROOT="${MY_DIR}/../../.."
 
-HELPER="${ANDROID_ROOT}/tools/extract-utils/extract_utils.sh"
+HELPER="${CORVUS_ROOT}/tools/extract-utils/extract_utils.sh"
 if [ ! -f "${HELPER}" ]; then
     echo "Unable to find helper script at ${HELPER}"
     exit 1
@@ -27,7 +27,7 @@ fi
 source "${HELPER}"
 
 # Initialize the helper for common
-setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${ANDROID_ROOT}" true
+setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${CORVUS_ROOT}" true
 
 # Copyright headers and guards
 write_headers "curtana"
@@ -41,7 +41,7 @@ write_footers
 if [ -s "${MY_DIR}/../${DEVICE}/proprietary-files.txt" ]; then
     # Reinitialize the helper for device
     INITIAL_COPYRIGHT_YEAR="$DEVICE_BRINGUP_YEAR"
-    setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false
+    setup_vendor "${DEVICE}" "${VENDOR}" "${CORVUS_ROOT}" false
 
     # Copyright headers and guards
     write_headers
