@@ -1,14 +1,14 @@
 [
   {
-    "remote": "pixel-devices",
-    "repository": "kernel_xiaomi_miatoll",
-    "target_path": "kernel/xiaomi/miatoll",
-    "branch": "eleven"
+    "remote": "github",
+    "repository": "PeacE-Boi/kernel_xiaomi_sm6250",
+    "target_path": "kernel/xiaomi/sm6250",
+    "branch": "test"
   },
   {
-    "remote": "pixel-devices-blobs",
-    "repository": "vendor_xiaomi_miatoll",
-    "target_path": "vendor/xiaomi/miatoll",
-    "branch": "eleven"
+    "remote": "github",
+    "repository": "PeacE-Boi/vendor_xiaomi_gram",
+    "target_path": "vendor/xiaomi/gram",
+    "branch": "corvus-11"
   }
 ]
