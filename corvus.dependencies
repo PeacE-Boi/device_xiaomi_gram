@@ -14,13 +14,13 @@
   {
     "repository": "PeacE-Boi/kernel_xiaomi_sm7125",
     "target_path": "kernel/xiaomi/sm7125",
-    "branch": "perf+",
+    "branch": "flos",
     "remote": "github"
   },
   {
     "repository": "PeacE-Boi/vendor_xiaomi_gram",
     "target_path": "vendor/xiaomi/gram",
-    "branch": "eleven",
+    "branch": "corvus",
     "remote": "github"
   },
   {
@@ -30,7 +30,7 @@
     "remote": "github"
   },
   {
-    "repository": "MrJarvis698/packages_apps_XiaomiDoze",
+    "repository": "PeacE-Boi/packages_apps_XiaomiDoze",
     "target_path": "packages/apps/XiaomiDoze",
     "branch": "11",
     "remote": "github"
