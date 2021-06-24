@@ -69,8 +69,8 @@ void load_device_properties() {
 
     if (hwname == "gram") {
         set_device_props(
-                "POCO/gram_in/gram:10/QKQ1.191215.002/V12.0.1.0.QJPINXM:user/release-keys",
-                "gram_in-user 10 QKQ1.191215.002 V12.0.1.0.QJPINXM release-keys",
+                "google/redfin/redfin:11/RQ3A.210605.005/7349499:user/release-keys",
+                "redfin-user 11 RQ3A.210605.005 7349499 release-keys",
                 "POCO", "gram", "POCO M2 Pro");
     } 
 }
