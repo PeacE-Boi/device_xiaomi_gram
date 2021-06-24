@@ -72,8 +72,6 @@ void load_device_properties() {
                 "POCO/gram_in/gram:10/QKQ1.191215.002/V12.0.1.0.QJPINXM:user/release-keys",
                 "gram_in-user 10 QKQ1.191215.002 V12.0.1.0.QJPINXM release-keys",
                 "POCO", "gram", "POCO M2 Pro");
-        property_override("ro.build.version.security_patch", "2020-09-01");
-        property_override("ro.vendor.build.security_patch", "2020-09-01");
     } 
 }
 
