@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/corvus_gram.mk
+    $(LOCAL_DIR)/cherish_gram.mk
 
 COMMON_LUNCH_CHOICES := \
-    corvus_gram-user \
-    corvus_gram-userdebug \
-    corvus_gram-eng
+    cherish_gram-user \
+    cherish_gram-userdebug \
+    cherish_gram-eng

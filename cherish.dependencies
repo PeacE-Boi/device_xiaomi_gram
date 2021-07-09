@@ -2,13 +2,13 @@
   {
     "repository": "PeacE-Boi/device_xiaomi_sm7125-common",
     "target_path": "device/xiaomi/sm7125-common",
-    "branch": "11_corvus",
+    "branch": "cherish-11",
     "remote": "github"
   },
   {
     "repository": "PeacE-Boi/device_xiaomi_sm7125-common-sepolicy",
     "target_path": "device/xiaomi/sm7125-common-sepolicy",
-    "branch": "corvus",
+    "branch": "basic",
     "remote": "github"
   },
   {

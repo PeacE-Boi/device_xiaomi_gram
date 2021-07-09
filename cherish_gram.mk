@@ -15,9 +15,9 @@
 #
 
 $(call inherit-product, device/xiaomi/gram/device.mk)
-$(call inherit-product, vendor/corvus/config/common_full_phone.mk)
+$(call inherit-product, vendor/cherish/config/common_full_phone.mk)
 
-PRODUCT_NAME := corvus_gram
+PRODUCT_NAME := cherish_gram
 PRODUCT_DEVICE := gram
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := SM7125
@@ -25,9 +25,15 @@ PRODUCT_MANUFACTURER := Xiaomi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
-# Corvus Official
-RAVEN_LAIR=Official
+# Bootanimation
+TARGET_BOOT_ANIMATION_RES := 1080
 
-# Corvus Maintainer
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.corvus.maintainer=ManavjitSingh
+# Cherish Official 
+CHERISH_BUILD_TYPE := OFFICIAL
+
+# Cherish Maintainer 
+PRODUCT_GENERIC_PROPERTIES += \
+    ro.cherish.maintainer=ManavjitSingh
+
+# Lawnchair
+USE_LAWNCHAIR :=true
